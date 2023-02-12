@@ -1,10 +1,34 @@
+import React, { useState } from "react";
 import "./styles.css";
 
-export default function App() {
+import SeatAvailability from "./components/SeatAvailability";
+import SeatMatrix from "./components/SeatMatrix";
+import PriceCalculator from "./components/PriceCalculator";
+import Header from "./components/Header";
+
+import MovieContext from "./components/MovieContext";
+
+const App = () => {
+  const [movies, EditMovies] = useState({
+    movieNames: {
+      price: 100,
+    },
+    moviePrice: 100,
+    totalSeats: 0,
+    seatNumbers: [],
+  });
+
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div className="main container">
+      <MovieContext.Provider value={{ movies, changeState: EditMovies }}>
+        <Header />
+        <SeatMatrix />
+        <SeatAvailability />
+        <PriceCalculator />
+        <button className="button">Book</button>
+      </MovieContext.Provider>
     </div>
   );
-}
+};
+
+export default App;
