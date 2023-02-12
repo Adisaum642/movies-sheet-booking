@@ -1,0 +1,87 @@
+.movie-layout{
+    flex-wrap: nowrap;
+   
+}
+.col-md-2{
+    padding: 0px 10px;
+   
+}
+.col-md-6{
+    padding: 0px 100px;
+
+}
+.seat{
+    
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 0px 0px;
+    margin: 3px;
+    cursor: pointer;
+    
+
+}
+.seat:hover{
+    transform: scale(1.1);
+}
+
+.gh-logo{
+    text-align: center;
+    font-size: 50px;
+    font-family: arial;
+
+}
+
+.row{
+    justify-content: center;
+    align-items: flex-start;
+}
+.seat-grey{
+    background-color: #ddd;
+}
+.seat-blue{
+    background-color: blue;
+}
+.seat-undefined{
+    cursor: auto;
+    pointer-events: none;
+}
+.movie-complex p{
+    text-align: center;
+    font-size: 30px;
+    font-family: arial;
+}
+.movie-selector{
+    width: 250px;
+}
+
+
+
+.movie-column-1{
+    
+    width: 200px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 40%;
+  right: 80%;
+  left: 0%;
+  margin: -25px 0 0 -25px
+  
+} 
+
+.row{
+    position: relative;
+    top:100%;
+    left: 50%;
+    
+}
+
+.selector{
+    position: absolute;
+  top: 70%;
+
+  left: 50%;
+}
+
+
